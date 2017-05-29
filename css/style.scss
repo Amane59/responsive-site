@@ -29,7 +29,7 @@ a {
 
 @media (min-width: 769px) {
   a {
-  @include link-colors($baseColor, darken($baseColor, 30%), lighten($baseColor, 10%), darken($baseColor, 20%));
+  @include link-colors($keyColor, darken($keyColor, 30%), lighten($keyColor, 10%), darken($keyColor, 20%));
   text-decoration: none;
   text-align: center;
   }
@@ -170,6 +170,7 @@ section {
     border:1px solid;
     border-radius:10px;
     margin: 0 auto; 
+    background-color: $baseColor;
   }
   
 }

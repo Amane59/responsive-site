@@ -19,15 +19,15 @@ a {
 
 @media (min-width: 769px) {
   a {
-    color: #FFFFFF;
+    color: #BB0000;
     text-decoration: none;
     text-align: center; }
     a:visited {
-      color: #cccccc; }
+      color: #550000; }
     a:hover {
-      color: #b3b3b3; }
+      color: #220000; }
     a:active {
-      color: white; } }
+      color: #ee0000; } }
 /* Align
 ------------------------------------------------------------*/
 .text-center {
@@ -124,6 +124,7 @@ section {
     padding: 8px 0 10px;
     border: 1px solid;
     border-radius: 10px;
-    margin: 0 auto; }
+    margin: 0 auto;
+    background-color: #FFFFFF; }
 
 /*# sourceMappingURL=style.css.map */
