@@ -59,18 +59,24 @@ a {
 }
 
 //headimage
-.flexible-images {
-  max-width: 100%;
-  height: 250px;
+.headimage {
+width: 100%;
+height: 250px;
+background-image:url(./images/london-titleimage.jpg);
+background-position:center center;
+background-size:cover;
 }
 
 @media (min-width: 769px) {
-.flexible-images {
-  max-width: 100%;
-  height: 500px;
+.headimage {
+width: 100%;
+height: 500px;
+background-image:url(./images/london-titleimage.jpg);
+background-position:center center;
+background-size:cover;
   }
 }
-  
+
 /* Contents
 ------------------------------------------------------------*/
 // Common Styles
