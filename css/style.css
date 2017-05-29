@@ -19,15 +19,15 @@ a {
 
 @media (min-width: 769px) {
   a {
-    color: #000066;
+    color: #FFFFFF;
     text-decoration: none;
     text-align: center; }
     a:visited {
-      color: black; }
+      color: #cccccc; }
     a:hover {
-      color: black; }
+      color: #b3b3b3; }
     a:active {
-      color: #000099; } }
+      color: white; } }
 /* Align
 ------------------------------------------------------------*/
 .text-center {
@@ -48,14 +48,20 @@ a {
 .uppercase, section h2 {
   text-transform: uppercase; }
 
-.flexible-images {
-  max-width: 100%;
-  height: 250px; }
+.headimage {
+  width: 100%;
+  height: 250px;
+  background-image: url(../images/london-titleimage.jpg);
+  background-position: center center;
+  background-size: cover; }
 
 @media (min-width: 769px) {
-  .flexible-images {
-    max-width: 100%;
-    height: 500px; } }
+  .headimage {
+    width: 100%;
+    height: 500px;
+    background-image: url(../images/london-titleimage.jpg);
+    background-position: center center;
+    background-size: cover; } }
 /* Contents
 ------------------------------------------------------------*/
 section {
@@ -90,7 +96,8 @@ section {
     border: solid 1px #990000;
     margin: 10px;
     flex: 1;
-    background-color: #000066; }
+    background-color: #000066;
+    padding: 0 30px; }
 
 @media (min-width: 769px) {
   #place .container {

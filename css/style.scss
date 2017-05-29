@@ -29,7 +29,7 @@ a {
 
 @media (min-width: 769px) {
   a {
-  @include link-colors($subColor, darken($subColor, 30%), lighten($subColor, 10%), darken($subColor, 20%));
+  @include link-colors($baseColor, darken($baseColor, 30%), lighten($baseColor, 10%), darken($baseColor, 20%));
   text-decoration: none;
   text-align: center;
   }
@@ -62,7 +62,7 @@ a {
 .headimage {
 width: 100%;
 height: 250px;
-background-image:url(./images/london-titleimage.jpg);
+background-image:url(../images/london-titleimage.jpg);
 background-position:center center;
 background-size:cover;
 }
@@ -71,7 +71,7 @@ background-size:cover;
 .headimage {
 width: 100%;
 height: 500px;
-background-image:url(./images/london-titleimage.jpg);
+background-image:url(../images/london-titleimage.jpg);
 background-position:center center;
 background-size:cover;
   }
@@ -128,6 +128,7 @@ section {
   margin: 10px;
   flex: 1;
   background-color:$subColor;
+  padding:0 30px;
   }
 }
 
@@ -170,5 +171,5 @@ section {
     border-radius:10px;
     margin: 0 auto; 
   }
-    
+  
 }
