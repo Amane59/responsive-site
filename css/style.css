@@ -8,21 +8,26 @@ html {
 body {
   color: #4c4c4c;
   font-size: 1.4rem;
-  font-family: "游ゴシック", YuGothic, "メイリオ", Verdana, "Hiragino Kaku Gothic ProN", Meiryo, sans-serif;
+  font-family: "游ゴシック", YuGothic, "メイリオ", Verdana, "Hiragino Kaku Gothic ProN", Meiryo, sans-serif, "Comic Sans MS";
   line-height: 1.6;
   letter-spacing: 0.1em;
-  background-color: #fdfcf6; }
+  background-color: #FFFFFF; }
 
 a {
-  color: #14c0c9;
-  text-decoration: none; }
-  a:visited {
-    color: #0f949b; }
-  a:hover {
-    color: #0f949b; }
-  a:active {
-    color: #16d6e0; }
+  text-decoration: none;
+  text-align: center; }
 
+@media (min-width: 769px) {
+  a {
+    color: #000066;
+    text-decoration: none;
+    text-align: center; }
+    a:visited {
+      color: black; }
+    a:hover {
+      color: black; }
+    a:active {
+      color: #000099; } }
 /* Align
 ------------------------------------------------------------*/
 .text-center {
@@ -45,8 +50,12 @@ a {
 
 .flexible-images {
   max-width: 100%;
-  height: 500px; }
+  height: 250px; }
 
+@media (min-width: 769px) {
+  .flexible-images {
+    max-width: 100%;
+    height: 500px; } }
 /* Contents
 ------------------------------------------------------------*/
 section {
@@ -57,39 +66,57 @@ section {
     font-size: 3.2rem; }
 
 #place {
-  background-color: #bea300; }
+  background-color: #FFFFFF; }
   #place .container {
     display: -webkit-flex;
     display: flex;
     justify-content: space-between;
     -webkit-flex-direction: column;
     flex-direction: column; }
+  #place h1 {
+    font-family: "Comic Sans MS";
+    font-weight: bold;
+    color: #000066;
+    font-size: 4.7rem;
+    margin-bottom: 60px; }
   #place h2 {
-    color: #fdfcf6;
+    color: #FFFFFF;
+    margin-bottom: 60px;
+    background-color: #BB0000; }
+  #place p {
+    color: #FFFFFF;
     margin-bottom: 60px; }
   #place .flex-box {
-    border: solid 1px skyblue;
+    border: solid 1px #990000;
     margin: 10px;
-    flex: 1; }
-  @media (max-width: 768px) {
-    #place .container {
-      flex-direction: column; } }
+    flex: 1;
+    background-color: #000066; }
 
+@media (min-width: 769px) {
+  #place .container {
+    -webkit-flex-direction: row;
+    flex-direction: row;
+    justify-content: space-between; }
+  #place .flex-box {
+    margin: 0 10px; } }
 #sight {
-  background-color: #bea300; }
-  #sight h2 {
-    color: #fdfcf6;
-    margin-bottom: 60px; }
+  text-align: center;
+  margin-top: 60px;
+  background-color: #BB0000; }
+  #sight h3 {
+    color: #FFFFFF;
+    font-size: 2.7rem;
+    margin-bottom: 23px; }
   #sight .button {
-    width: 200px;
-    font-size: 24px;
+    width: 180px;
+    font-size: 23px;
     font-weight: bold;
     text-decoration: none;
     display: block;
     text-align: center;
     padding: 8px 0 10px;
-    color: #333;
-    border: 1px solid #333;
-    border-radius: 5px; }
+    border: 1px solid;
+    border-radius: 10px;
+    margin: 0 auto; }
 
 /*# sourceMappingURL=style.css.map */

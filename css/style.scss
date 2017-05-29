@@ -1,12 +1,12 @@
 @import "compass";
 @import url(https://fonts.googleapis.com/css?family=Abel);
 // font-family
-$baseFontFamily :"游ゴシック", YuGothic, "メイリオ",Verdana, "Hiragino Kaku Gothic ProN", Meiryo, sans-serif;
+$baseFontFamily :"游ゴシック", YuGothic, "メイリオ",Verdana, "Hiragino Kaku Gothic ProN", Meiryo, sans-serif, 'Comic Sans MS';
 
 // colors
-$baseColor: #fdfcf6;
-$subColor: #bea300;
-$keyColor: #14c0c9;
+$baseColor: #FFFFFF;
+$subColor: #000066;
+$keyColor: #BB0000;
 $fontColor: #4c4c4c;
 
 /* Base
@@ -17,16 +17,23 @@ body{
   color: $fontColor;
   font-size: 1.4rem;
   font-family:$baseFontFamily;
-  line-height:1.6;
+  line-height: 1.6;
   letter-spacing: 0.1em; 
   background-color: $baseColor;
 }
 
 a {
-  @include link-colors($keyColor, darken($keyColor, 10%), lighten($keyColor, 5%), darken($keyColor, 10%));
   text-decoration: none;
+  text-align: center;
 }
 
+@media (min-width: 769px) {
+  a {
+  @include link-colors($subColor, darken($subColor, 30%), lighten($subColor, 10%), darken($subColor, 20%));
+  text-decoration: none;
+  text-align: center;
+  }
+}
 /* Align
 ------------------------------------------------------------*/
 .text-center {
@@ -46,6 +53,7 @@ a {
 .abel {
   font-family: 'Abel', sans-serif;
 }
+
 .uppercase {
   text-transform: uppercase;
 }
@@ -53,9 +61,16 @@ a {
 //headimage
 .flexible-images {
   max-width: 100%;
-  height: 500px;
+  height: 250px;
 }
 
+@media (min-width: 769px) {
+.flexible-images {
+  max-width: 100%;
+  height: 500px;
+  }
+}
+  
 /* Contents
 ------------------------------------------------------------*/
 // Common Styles
@@ -65,6 +80,7 @@ section {
     width: 90%;
     @extend .block-center;
   }
+  
   h2 {
     @extend .abel;
     font-size: 3.2rem;
@@ -74,7 +90,7 @@ section {
 
 //place
 #place {
-  background-color: $subColor;
+  background-color: $baseColor;
   
   .container {
     @include display-flex;
@@ -82,45 +98,71 @@ section {
     @include flex-direction(column);
   }
   
+  h1{
+    font-family: "Comic Sans MS"; 
+    font-weight: bold;
+    color:$subColor;
+    font-size: 4.7rem;
+    margin-bottom: 60px;
+  }
+  
   h2 {
     color: $baseColor;
+    margin-bottom: 60px;
+    background-color:$keyColor;
+  }
+  
+  p{
+    color:$baseColor;
     margin-bottom: 60px;
   }
   
   .flex-box {
-  border: solid 1px skyblue;
+  border: solid 1px #990000;
   margin: 10px;
   flex: 1;
+  background-color:$subColor;
   }
-  
-  @media (max-width: 768px) {
-  .container {
-    flex-direction: column;
-  }
-  }
-
 }
 
-  // Contact
+// desktop
+@media (min-width: 769px) {
+
+#place {
+    .container {
+      @include flex-direction(row);     // スキルボックスを横に並べる
+      justify-content: space-between;
+    }
+    .flex-box {
+      margin: 0 10px;                   // 左右にマージン
+    }
+  }
+}
+
+//sight
   
 #sight {
-  background-color: $subColor;
+  text-align: center;
+  margin-top: 60px;
+  background-color: $keyColor;
   
-  h2 {
+  h3 {
     color: $baseColor;
-    margin-bottom: 60px;
+    font-size: 2.7rem;
+    margin-bottom: 23px;
   }
  
 .button {
-    width:200px;
-    font-size:24px;
+    width:180px;
+    font-size:23px;
     font-weight:bold;
     text-decoration:none;
     display:block;
     text-align:center;
     padding:8px 0 10px;
-    color:#333;
-    border:1px solid #333;
-    border-radius:5px;
+    border:1px solid;
+    border-radius:10px;
+    margin: 0 auto; 
   }
+    
 }
